@@ -18,3 +18,10 @@ time_wait的目的是防止老的tcp segment被解释成新的segment，linux上
 ## 关于FIN_WAIT2
 
 (在主动方调用close而不是half close)不会一直等到对方应用调用close，设置一个定时器，等一定时间后就将这个连接从FIN_WAIT2转入CLOSED状态，TCP/IP详解上说BSD衍生版是10分+75秒，但我的linux上测试是不超过3分钟。
+
+## tcp_syn_retries
+
+This flag controls how many times syn segment retries to establish connection.
+When I change it by 1 on my archlinux, this doesn't work.
+But when I change it on my ubuntu, this works.
+First retry wait for 1s, the next wait for 2s, 4s. Use exponential backoff.
