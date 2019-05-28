@@ -6,3 +6,16 @@
 * insert mode C-k char1 char2 二合字母<<: «, 14: ¼
 * insert mode C-r(use register) = expression
 * insert mode C-o into normal mode execute a command and back to insert mode
+
+## open file
+
+### path variable
+
+This variable is used to :find file, if you want to do recursive search, you need to add **, vim will expand it. Note that is tab expansion is supported.
+
+Find abc.java in ~/jvm recursively:
+
+```vim
+:set path+=~/jvm/**
+:find abc.java
+```
