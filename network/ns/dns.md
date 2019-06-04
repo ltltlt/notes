@@ -45,6 +45,19 @@ then run resolvconf -u
 
 Since dnsmasq use syslog under linux, you can use `tail -F /var/log/syslog | grep -i dnsmasq` to view log.
 
+## Problems have not been solved(solved)
+
+- [x] dnsmasq always use upstream nameserver 127.0.0.1(it listen on 127.0.1.1), and some other dns nameserver(these are not problems, because they are from dhcp). So where is 127.0.0.1 comes from.
+    Turns out it's from my dhclient.conf(/etc/dhcp/dhclient.conf), following line:
+
+    ```bash
+    prepend domain-name-servers 127.0.0.1;
+    ```
+
+- [x] dig get no result, `FORMERR`, because dig send cookie dns option, but dnsmasq doesn't support this option, and give back an error. See [this][dns FORMERR].
+    Solution is simple, use `dig -nocookie url` instead
+
 ## Useful links
 
 - <https://www.hi-linux.com/posts/30947.html>
+- [dns FORMERR]: https://kevinlocke.name/bits/2017/01/20/formerr-from-microsoft-dns-server-for-dig/ "dns FORMERR"
