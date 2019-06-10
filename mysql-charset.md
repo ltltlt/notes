@@ -4,7 +4,7 @@
 
 ![mysql charset](pictures/mysql-charset.png)
 
-- mysql中utf8最多占用3字节, 只包含基本多文本平面的字符; utf8mb4最多占用4字节, mb4表示most bytes 4
+- mysql中utf8最多占用3字节, 只包含基本多文本平面的字符; utf8mb4最多占用4字节, mb4表示most bytes 4(or multi-byte?)
 - [mysql中utf8和utf8mb4区别](http://ourmysql.com/archives/1402)
 
 ## collation(字符的排序规则)
