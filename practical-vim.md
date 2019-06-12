@@ -19,3 +19,12 @@ Find abc.java in ~/jvm recursively:
 :set path+=~/jvm/**
 :find abc.java
 ```
+
+## netrw
+
+this vim plugin can open network files(example: :e https://www.google.com/)
+
+## 实际行和屏幕行
+
+j, k 在实际行间移动
+gj, gk 在屏幕行间移动
