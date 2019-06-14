@@ -7,6 +7,10 @@
 * insert mode C-r(use register) = expression
 * insert mode C-o into normal mode execute a command and back to insert mode
 
+## c, d 的区别
+
+c删除选中内容并进入insert mode, d删除选中内容, 不进入insert mode
+
 ## open file
 
 ### path variable
