@@ -1,7 +1,7 @@
 The many different 802.11 specifications -- most commonly b, a, g, n and ac -- all operate with the same basic data link protocol. But, how they operate at the physical layer varies. 
 
 Memorizing all of these differences probably isn’t worth the time unless you’re going to be working with many different types of wireless networks all the time. The most important thing to remember is that networks that operate on the 5Ghz band are almost always faster, but have less of a range. Most of the 2.4Ghz networks are slightly slower and more susceptible to interference, but usually cover a larger area.
-(5G速度更快，更不容易受影响，2.4G覆盖的范围更广)
+(5G速度更快，更不容易受影响，2.4G覆盖的范围更广, 更通用(蓝牙，微波炉等都是2.4GHz的电磁波), 也更容易发生冲突)
 
 2.4GHz指的实际上是频带范围在2.4GHz~2.5GHz的电磁波
 其中又可以细分为多个channel
