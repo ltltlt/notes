@@ -6,6 +6,8 @@ from linux kernel view, each thread(task) in fact have different pid, but may sh
 
 the `getpid` system call in fact return tgid
 
+the `gettid` system call in fact return kernel view pid
+
 the `top` command shows all process by default(in the pid column, it is in fact tgid), you can press `h` to switch to view all thread
 
 the `htop` by default shows all thread
