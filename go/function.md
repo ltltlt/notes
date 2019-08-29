@@ -27,3 +27,12 @@ func f() {
 v1 := (**funcval)(unsafe.Pointer(&f))
 fmt.Println((**v1).fn)
 ```
+
+或者用runtime里的funcPC
+
+```go
+func funcPC(f interface{}) uintptr {
+	// f是eface结构，(&f)+ptrsize拿到*uintptr的指针
+	return **(**uintptr)(add(unsafe.Pointer(&f), sys.PtrSize))
+}
+```
